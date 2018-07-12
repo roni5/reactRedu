@@ -1,28 +1,28 @@
 
 
-.App {
+.app {
   widows: 90%;
   margin:auto;
   /*text-align: center;*/
 }
 
-.App-logo {
+.app-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-.App-header {
+.app-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+.app-title {
   font-size: 3.0em;
 }
 
-.App-intro {
+.app-intro {
   font-size: large;
 }
 
