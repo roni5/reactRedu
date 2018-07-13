@@ -15,7 +15,6 @@ const Counter = props => {
 }
 
 //const mapStateToProps = (state) => ({
-  //console.log('mapStateToProps', state);
  // count: state.count
 //});
 function mapStateToProps(state) {

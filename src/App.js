@@ -17,8 +17,8 @@ class App extends Component {
         </header>
         <div className="clearfix , grid-figure">
           <div className="grid-photo-wrap">
-            <Lister store={store}/>
-            <Input  store={store}  />
+            <Lister store={store}  />
+
 
       </div></div></div>
     );

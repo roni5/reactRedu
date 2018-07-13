@@ -12,6 +12,9 @@ function input(props) {
   );
 }
 //input.propTypes = {
+  //fetchPosts: PropTypes.func.isRequired,
+  //posts: PropTypes.array.isRequired,
+  //newPost: PropTypes.object
 //}
 //reduxmap better hocredux
 const mapStateToProps = (state) => ({

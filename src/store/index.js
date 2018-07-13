@@ -7,7 +7,7 @@ const initialState = {
   items: []
 };
 const reducer = (state = initialState, action) => {
-  console.log('reducer running', action);
+  //console.log('reducer running', action);
   switch (action.type) {
     case constants.CHANGE_INPUT_TEXT:
     return Object.assign({}, state, {inputText: action.text });
@@ -17,9 +17,6 @@ const reducer = (state = initialState, action) => {
         items: state.items.concat(state.inputText),
         inputText: ''
       });
-    break;
-    case 'DECREMENT':
-    return Object.assign({}, state, { count: state.count - 1 });
     break;
   default:
   return state;
