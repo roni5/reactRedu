@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import './components/Counter';
 import Counter from './components/Counter';
+import Input from './components/input';
 import store from './store/';
 
 class App extends Component {
@@ -17,11 +18,8 @@ class App extends Component {
         <div className="clearfix , grid-figure">
           <div className="grid-photo-wrap">
             <Counter store={store}/>
-        <img
-            src={logo}
-            alt="logo"
-            className="clearfix ,grid-photo"
-          />
+            <Input  store={store}  />
+
       </div></div></div>
     );
   }
