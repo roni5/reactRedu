@@ -24,11 +24,14 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     inputChanged: (evt) => {
-      //  const action = {type: 'INPUT_CHANGE' , text: evt.target.value}
-      //  dispatch(action);
-      //  }
       dispatch({ type: 'INPUT_CHANGE', text: evt.target.value });
-        }
+    },
+    submit: (evt) => {
+      evt.preventDefault();
+      const action = { type: 'ADD_ITEM'};
+            dispatch(action);
+           }
+
     }
 }
 
