@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import './components/Counter';
-import Counter from './components/Counter';
+//import Counter from './components/Counter';
+import Lister from './components/Lister';
 import Input from './components/input';
 import store from './store/';
 
@@ -17,7 +17,7 @@ class App extends Component {
         </header>
         <div className="clearfix , grid-figure">
           <div className="grid-photo-wrap">
-            <Counter store={store}/>
+            <Lister store={store}/>
             <Input  store={store}  />
 
       </div></div></div>

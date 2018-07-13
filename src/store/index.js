@@ -3,7 +3,8 @@ import constants from './constants';
 console.log('constants' ,constants);
 
 const initialState = {
-   inputText: ''
+  inputText: '',
+  items: []
 };
 const reducer = (state = initialState, action) => {
   console.log('reducer running', action);
