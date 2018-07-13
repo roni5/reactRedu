@@ -14,23 +14,22 @@ function input(props) {
 //input.propTypes = {
 //}
 //reduxmap better hocredux
-//const mapStateToProps = (state) => ({
-//  inputValue: state.inputValue
-//})
-const mapStateToProps = (state) => {
-  return {
-    inputValue: state.inputValue
-  }
-}
+const mapStateToProps = (state) => ({
+  inputValue: state.inputValue
+});
+//const mapStateToProps = (state) => {
+  //return { inputValue: state.inputValue }
+//}
 
 const mapDispatchToProps = (dispatch) => {
   return {
     inputChanged: (evt) => {
-      console.log('changed', evt.target.value);
-      const action = {type: 'INPUT_CHANGE' , text: evt.target.value}
-      dispatch(action);
-     }
-   }
+      //  const action = {type: 'INPUT_CHANGE' , text: evt.target.value}
+      //  dispatch(action);
+      //  }
+      dispatch({ type: 'INPUT_CHANGE', text: evt.target.value });
+        }
+    }
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(input);
