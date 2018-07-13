@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 function input(props) {
   return (
     <div>
-      <input value={props.inputValue} onChange={props.inputChanged} />
-      <p>{props.inputValue}</p>
+      <input value={props.inputText} onChange={props.inputChanged} />
+      <p>{props.inputText}</p>
     </div>
   );
 }
@@ -15,16 +15,16 @@ function input(props) {
 //}
 //reduxmap better hocredux
 const mapStateToProps = (state) => ({
-  inputValue: state.inputValue
+  inputText: state.inputText
 });
 //const mapStateToProps = (state) => {
-  //return { inputValue: state.inputValue }
+  //return { inputText: state.inputText }
 //}
 
 const mapDispatchToProps = (dispatch) => {
   return {
     inputChanged: (evt) => {
-      dispatch({ type: 'INPUT_CHANGE', text: evt.target.value });
+      dispatch({ type: 'CHANGE_INPUT_TEXT', text: evt.target.value });
     },
     submit: (evt) => {
       evt.preventDefault();
