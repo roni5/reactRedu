@@ -9,6 +9,7 @@ const Counter = props => {
       <h2> I am Counter</h2>
       <p> {props.count } </p>
       <button onClick={props.onIncrementClick}>increment</button>
+      <button onClick={props.onDecrementClick}>decrement</button>
     </div>
   )
 }
@@ -28,6 +29,10 @@ const mapDispatchToProps = dispatch => ({
   onIncrementClick: () => {
     console.log('clicking');
     const action = { type: 'INCREMENT' };
+    dispatch(action);
+  },
+  onDecrementClick: () => {
+    const action = { type: 'DECREMENT' };
     dispatch(action);
   }
 });
