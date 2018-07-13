@@ -1,0 +1,4 @@
+export default {
+  CHANGE_INPUT_TEXT: 'CHANGE_INPUT_TEXT',
+  ADD_ITEM: 'ADD_ITEM'
+}
