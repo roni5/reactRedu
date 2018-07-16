@@ -11,16 +11,20 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case constants.CHANGE_INPUT_TEXT:
     return Object.assign({}, state, {inputText: action.text });
-    break;
+    //break;
   case  constants.ADD_ITEM:
       return Object.assign({}, state, {
         items: state.items.concat(state.inputText),
         inputText: ''
       });
-    break;
-  default:
+    case constants.DELETE_ITEM:
+      console.log('hitting delete reducer');
+      const copyOfItems = state.items.slice();
+      copyOfItems.splice(action.index, 1);
+      return Object.assign({}, state, { items: copyOfItems });
+    default:
   return state;
-    break;
+
   }
 }
 

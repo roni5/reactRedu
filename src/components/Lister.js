@@ -16,7 +16,8 @@ function Lister(props) {
       </form>
       <ul>
         { props.items.map((item, index) => {
-          return <li key={index} > {item} </li>
+          return <li key={index}
+            onClick= {()=> props.itemDelete(index)}> {item} </li>
         })}
       </ul>
     </div>
@@ -32,7 +33,6 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     inputChange: (evt) => {
-      console.log('another change');
       const action = { type: constants.CHANGE_INPUT_TEXT, text: evt.target.value};
             dispatch(action);
     },
@@ -40,7 +40,13 @@ function mapDispatchToProps(dispatch) {
       evt.preventDefault();
       const action = { type: constants.ADD_ITEM };
             dispatch(action);
-           }
+    },
+    itemDelete: (index) => {
+      console.log('index', index)
+      const action = { type: constants.DELETE_ITEM, index:index };
+            dispatch(action);
+    }
+
     }
 }
 
